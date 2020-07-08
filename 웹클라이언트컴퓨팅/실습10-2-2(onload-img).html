@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>onload로 이미지 크기 출력</title>
+	<script type="text/javascript">
+		function Image_size(){
+			var img = document.getElementById("myImg");
+			var mySpan = document.getElementById("mySpan");
+			mySpan.innerHTML = "이미지 크기 : " + img.width + "x" + img.height;
+		}
+
+		function changeImage(){
+			var img = document.getElementById("myImg");
+			img.src = "media/banana.png";
+			// var mySpan = document.getElementById("mySpan");
+			// mySpan.innerHTML = "이미지 크기 : " + img.width + "x" + img.height;
+			myImg.onload = function(){
+				var mySpan = document.getElementById("mySpan");
+				mySpan.innerHTML = "이미지 크기 : " + img.width + "x" + img.height;
+			}
+		}
+	</script>
+</head>
+<body onload="Image_size()">
+	<h3>onload로 이미지 크기 출력</h3>
+	<hr>
+	<form>
+		<input type="button" value="이미지 변경" id="button" onclick="changeImage()">
+		<span id="mySpan">이미지 크기</span>
+	</form>
+	
+	<hr>
+	<p><img src="media/apple.png" id="myImg"></p>
+
+</body>
+</html>

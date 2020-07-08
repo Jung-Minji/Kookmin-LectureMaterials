@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>계산기</title>
+	<script type="text/javascript">
+		function calculate(){
+			var exp = document.getElememtById("exp");
+			var result = document.getElememtById("result");
+			result.value = eval(exp.value);
+		}
+		function clear_a(){
+			var exp = document.getElememtById("exp");
+			var result = document.getElememtById("result");
+			exp.value = "";
+			result.value = "";
+		}
+	</script>
+</head>
+<body>
+	<h3>계산기 만들기</h3>
+	<hr>
+	계산하고자 하는 수식을 입력하고 계산 버튼을 눌러봐요
+	<br><br>
+	<form>
+		식 <input type="text" id="exp" value=""><br>
+		값 <input type="text" id="result"><br><br>
+		<input type="button" value="계산 " onclick="calculate()">
+		<input type="button" value="취소 " onclick="clear_a()">
+	</form>
+
+</body>
+</html>

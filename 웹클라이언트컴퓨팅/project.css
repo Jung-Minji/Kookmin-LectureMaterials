@@ -1,0 +1,14 @@
+body{background-color: green;}
+h2, hr{color: white; text-align: center;}
+table{border-spacing: 50px; pointer-events: none;} 
+img:hover{border-color: white;}
+.state{background-color: #eee6c4; width: 110px; height: 40px; margin-bottom: 20px; margin-left: 30px; text-align: center;}
+#start_d {margin-top: 30px; height: 50px;}
+#message_d {height: 50px;}
+.table1{float: left;}
+.table2{background-color: #81c147; float: right; width: 80%;
+height: 500px; margin-top: 30px; margin-right: 50px;}
+#gameOverMessage{color: red; font-size: 100px; text-align: center;
+margin-bottom: 400px; margin-left: 130px;
+}
+

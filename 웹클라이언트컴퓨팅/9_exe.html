@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>마우스 클릭 연습</title>
+<!-- <style type="text/css">
+	table{
+		border : 1px solid blue;
+		border-collapse: collapse;
+	}
+
+	td{
+		border: 1px solid blue;
+		width: 50px;
+		height: 50px;
+		padding: 0px;
+	}
+</style> -->
+</head>
+<body onload="set()">
+	<script type="text/javascript">
+		var select = -1;
+		var tds;
+		var img;
+		
+		function set(){
+			createTable();
+			tds = document.getElementsByTagName("td");
+			img = document.createElement("img");
+			img.setAttribute("src", "media/donkey.png");
+			img.onclick = moveImage
+			moveImage();
+		}
+
+		function moveImage(){
+			if(select != -1)
+				tds[select].removeChild(img);
+			select = Math.floor(Math.random() * tds.length);
+			tds[select].appendChild(img);
+		}
+
+		function createTable(){
+			var table = document.createElement("table");
+			table.style.border = "1px solid blue";
+			table.style.borderCollapse = "collapse";
+			document.body.appendChild(table);
+
+			for(var i=0; i<10; i++){
+				var tr = document.createElement("tr");
+				table.appendChild(tr);
+				for(var j=0; j<10; j++){
+					var td = document.createElement("td");
+					td.style.border = "1px solid blue";
+					td.style.width = "50px";
+					td.style.height = "50px";
+					td.style.padding = "0px";
+					tr.appendChild(td);
+				}
+			}
+		}
+	</script>
+<h3>마우스 클릭 연습</h3>
+<hr>
+<!-- <table>
+<tr><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td>
+<td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td></tr>
+<tr><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td>
+<td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td></tr>
+<tr><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td>
+<td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td></tr>
+<tr><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td>
+<td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td></tr>
+<tr><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td>
+<td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td></tr>
+<tr><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td>
+<td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td></tr>
+<tr><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td>
+<td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td></tr>
+<tr><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td>
+<td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td></tr>
+<tr><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td>
+<td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td></tr>
+<tr><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td>
+<td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td><td><img src=""></td></tr>
+</table> -->
+</body>
+</html>

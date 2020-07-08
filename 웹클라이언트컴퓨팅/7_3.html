@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>정답 추측하기</title>
+</head>
+<body>
+	<h3>정답 추측하기</h3>
+	<hr>
+	<script type="text/javascript">
+		var answer = 59, trial = 0;
+
+		do{
+			var guess = prompt("정답을 추측해 보시오");
+			trial++;
+			if (guess > answer)
+				alert("제시한 정수가 높습니다.");
+			else if (guess < answer)
+				alert("제시한 정수가 낮습니다.");
+
+		}while(guess != answer);
+
+		document.write("축하합니다.<br> 정답 =" + answer + ", 시도횟수 =" + trial);
+	</script>
+
+</body>
+</html>

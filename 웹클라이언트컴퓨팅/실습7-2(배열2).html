@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>배열로 리스트 만들기</title>
+</head>
+<body>
+	<h3>라면을 만드는데 필요한 재료</h3>
+	<hr>
+	<script type="text/javascript">
+		var itemlist = new Array(4);
+		itemlist[0] = "라면";
+		itemlist[1] = "계란";
+		itemlist[2] = "물";
+		itemlist[3] = "파";
+
+		document.write("<ul>");
+		for(var i=0; i<itemlist.length; i++)
+			document.write("<li>" + itemlist[i]);
+		document.write("</ul>");
+	</script>
+
+</body>
+</html>

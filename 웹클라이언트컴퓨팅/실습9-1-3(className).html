@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>document.getElementsByClassName</title>
+	<script type="text/javascript">
+		function change1(){
+			var arr = document.getElementsByClassName("fruit");
+			for(var i=0; i<arr.length; i++){
+				var span = arr[i];
+				span.style.color = "orchid";
+				span.style.fontSize = "20px";
+			}
+		}
+
+		function change2(){
+			var arr = document.getElementsByClassName("vegetable");
+			for(var i=0; i<arr.length; i++){
+				var span = arr[i];
+				span.style.color = "green";
+				span.style.fontSize = "20px";
+			}
+		}
+
+		function change(){
+			var arr = document.getElementsByTagName("li");
+			for(var i=0; i<arr.length; i++){
+				var span = arr[i];
+				span.style.color = "black";
+				span.style.fontSize = "16px";
+			}
+		}
+	</script>
+</head>
+<body>
+	<h3>내가 좋아하는 과일
+		<button onclick="change1()">과일</button>
+		<button onclick="change2()">채소</button>
+		<button onclick="change()">원래대로</button></h3>
+	<hr>
+	<ul>
+		<li class="fruit">사과</li>
+		<li class="fruit">바나나</li>
+		<li class="vegetable">토마토</li>
+		<li class="vegetable">오이</li>
+	</ul>
+
+
+</body>
+</html>

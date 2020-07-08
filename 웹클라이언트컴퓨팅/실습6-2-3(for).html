@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h3>숫자의 합 구하기</h3>
+	<hr>
+
+	<script type="text/javascript">
+		var n = prompt("정수를 입력하세요", "");
+		n = parseInt(n);
+		var sum = 0;
+		for(var i=1; i<=n; i++)
+		{
+			document.write(i);
+			sum += i;
+			if (i != n)
+				document.write("+");
+			else
+				document.write("=");
+			
+		}
+			
+		document.write(sum);
+	</script>
+
+</body>
+</html>

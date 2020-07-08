@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>함수</title>
+</head>
+<body>
+	<h3>함수 adder()</h3>
+	<hr>
+	<script type="text/javascript">
+		var num1, num2;
+		function adder(a, b){
+			var sum;
+			sum = a + b;
+			return sum;
+		}
+
+		function input(){
+			num1 = parseInt(prompt("첫번째 숫자는? "));
+			num2 = parseInt(prompt("두번째 숫자는? "));
+		}
+		input();
+		document.write("입력받은 두 수의 합 = " + adder(num1, num2) + "<br>");
+
+		input();
+		document.write("입력받은 두 수의 합 = " + adder(num1, num2) + "<br>");
+	</script>
+
+</body>
+</html>
