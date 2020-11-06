@@ -2,47 +2,36 @@
 <html>
 <head>
 	<title>숨어있는 강아지 찾기</title>
-	
-	<style type="text/css">
-		body{background-color: : green;}
-		h3{color: white; }
-	</style>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="myProject.css">
+	<script src="myProject.js"></script>
 </head>
 <body>
-	<h3><strong>숨어있는 강아지 찾기</strong></h3>
+	<h2><strong>숨어있는 강아지 찾기</strong></h2>
 	<hr>
-<!-- 
-	<script type="text/javascript">
-		var left = 0;
-		var fail = 0;
-		var time = 0;
-		var message = "";
-		function setLeft(i_left){
-			left = i_left;
-			return left;
-		}
-		function setFail(i_fail){
-			fail = i_fail;
-			return fail;
-		}
+	<div class="table1">
+	<div class="state" id="start_d" onclick="startGame()">게임 시작</div>
+	<div class="state" id="left_d">남은수 : <span id="left_s">8</span></div>
+	<div class="state" id="fail_d">실패수 : <span id="fail_s">0</span></div>
+	<div class="state" id="time_d"><span id="time_s">시간    0</span></div>
+	<div class="state" id="message_d">게임이 진행될 <br>예정입니다.</div>
+	</div>
 
-		function setTime(i_time){
-			time = i_time;
-			return time;
-		}
-		function setMessage(i_message){
-			message = i_message;
-			return message;
-		}
+	<div class="table2">
+		<table>
+			<tr><td><img id="1" src="egg.png" onclick="playGame(this)"></td><td><img src="egg.png" id="2" onclick="playGame(this)"></td><td><img src="egg.png" id="3" onclick="playGame(this)"></td><td><img src="egg.png" id="4" onclick="playGame(this)"></td>
+				<td><img src="egg.png " id="5" onclick="playGame(this)"></td><td><img src="egg.png" id="6" onclick="playGame(this)"></td><td><img src="egg.png" id="7" onclick="playGame(this)"></td><td><img src="egg.png" id="8" onclick="playGame(this)"></td></tr>
+			<tr><td><img src="egg.png" id="9" onclick="playGame(this)"></td><td><img src="egg.png" id="10" onclick="playGame(this)"></td><td><img src="egg.png" id="11" onclick="playGame(this)"></td><td><img src="egg.png" id="12" onclick="playGame(this)"></td>
+				<td><img src="egg.png" id="13" onclick="playGame(this)"></td><td><img src="egg.png" id="14" onclick="playGame(this)"></td><td><img src="egg.png" id="15" onclick="playGame(this)"></td><td><img src="egg.png" id="16" onclick="playGame(this)"></td></tr>
+			<tr><td><img src="egg.png" id="17" onclick="playGame(this)"></td><td><img src="egg.png" id="18" onclick="playGame(this)"></td><td><img src="egg.png" id="19" onclick="playGame(this)"></td><td><img src="egg.png" id="20" onclick="playGame(this)"></td>
+				<td><img src="egg.png" id="21" onclick="playGame(this)"></td><td><img src="egg.png" id="22" onclick="playGame(this)"></td><td><img src="egg.png" id="23" onclick="playGame(this)"></td><td><img src="egg.png" id="24" onclick="playGame(this)"></td></tr>
+		</table>
+		<div id="continueGameMessage"></div>
+	</div>
+
 	
-
-		document.write("<p id='start_p'>게임 시작</p>");
-		document.write("<p id='left_p'>남은수: " + state.setLeft(8) + "</p>");
-		document.write("<p id='fail_p'>시간 " + state.setTime(0) + "</p>");
-		document.write("<p id='message_p'>" + state.setMessage("게임이 시작될 예정입니다.") + "</p>")
-
-	</script> -->
-
+	<p id="gameOverMessage" style="display: none"> <strong>GAME OVER</strong></p>
+	<audio id="playAudio"></audio>
 
 </body>
 </html>

@@ -1,0 +1,32 @@
+body{background-color: green;}
+h2, hr{color: white; text-align: center;}
+table{border-spacing: 50px; pointer-events: none; z-index: 1; position: absolute;} 
+img:hover{opacity: 0.7;}  /* upgrade : 이미지 불투명하게 만들기 */
+.state{background-color: #eee6c4; width: 110px; height: 40px; margin-bottom: 15px; margin-left: 50px; text-align: center;}
+#start_d {margin-top: 30px; height: 50px;}
+#message_d {height: 50px;}
+.table1{float: left;}
+.table2{background-color: #81c147; float: right; width: 80%;
+height: 400px; margin-top: 30px; margin-right: : 100px; margin-left: 10px;}
+
+#gameOverMessage {
+  display: inline-block;
+  margin: 0 -.05em;
+  animation: showGameover .7s infinite;
+}
+
+@keyframes showGameover{
+ 	0%, 100% {
+		transform: translateY(0);
+		}
+		50% {
+		transform: translateY(15px);
+	 	}
+}		
+
+#gameOverMessage{color: red; font-size: 100px; text-align: center;
+	margin-left: 400px; margin-top:200px; position: absolute; z-index: 2;
+	animation-name: showGameover; animation-iteration-count : infinite;
+}
+#continueGameMessage{color: white; font-size: 30px; font-weight: bold; margin-top: 400px;}
+
